@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "Produtos",
+  "info": {
+    "name": "produto",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Nome": {
+      "maxLength": 100,
+      "minLength": 3,
+      "type": "string",
+      "required": true
+    },
+    "Preco": {
+      "type": "decimal",
+      "required": true
+    },
+    "user": {
+      "columnName": "Usuario",
+      "model": "user",
+      "via": "produto",
+      "plugin": "users-permissions"
+    }
+  }
+}
